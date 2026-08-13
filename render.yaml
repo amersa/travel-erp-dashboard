@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: travel-erp-dashboard
+    env: node
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: VITE_SUPABASE_URL
+        value: https://gnpuiyxsqmfeolyxhmeghi.supabase.co
+      - key: VITE_SUPABASE_ANON_KEY
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImducHVpeXNxbWZlb2xyaG1lZ2hpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY1NzQ4NjIsImV4cCI6MjEwMjE1MDg2Mn0.0OcJwbGnURqWc7nLHWfRscTa0p7ANHpcY0skBlfW-Dg
